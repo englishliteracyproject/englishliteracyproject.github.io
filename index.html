@@ -1,9 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Literacy Project</title>
+  <link rel="stylesheet" href="elpstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  
 </head>
 <body>
-    <h1>it works?</h1>
+
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('home')">
+    <div class="nav-logo-icon">
+      <img src="https://scontent-iad6-1.cdninstagram.com/v/t51.82787-19/619376392_17849492448664692_4074580051509114084_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby41MDAuYzIifQ&_nc_ht=scontent-iad6-1.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2gGDiq3jNgPCY_CdpLt35A_0CT0TZYiOll4GVlQj6FRuIcsr9uZgq5r_S4eTJBn5BRg&_nc_ohc=0v7OqxYUiqIQ7kNvwH5WY4d&_nc_gid=Wnb7HxVDJBWzaNS8A3FThw&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af3czgCQRA33IDAOPwIlShNODxhdmrkeC5JdMstdJrHG0Q&oe=69E9E961&_nc_sid=7a9f4b" alt="ELP">
+    </div>
+    <span class="nav-brand">English Literacy Project</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')">Home</a></li>
+    <li><a href="#programs" onclick="showPage('home')">Programs</a></li>
+    <li><a href="#tools" onclick="showPage('home')">How We Meet</a></li>
+    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
+
+  <section class="hero">
+    <h1>English Literacy<br><em>Project</em></h1>
+    <p>We provide accessible English tutoring for students abroad, offering personalized classes and immersive language exposure at an international scale.</p>
+    <div class="hero-cta">
+      <a href="#" class="btn-primary" onclick="showPage('contact')">Get Involved</a>
+      <a href="#programs" class="btn-secondary">Our Programs</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+
+
+  <section class="section" id="programs">
+    <div class="section-label">Programs</div>
+    <div class="section-title">Where we teach</div>
+    <p class="section-subtitle">Currently serving students in China and South Korea with tailored English tutoring programs.</p>
+    <div class="programs-grid">
+      <div class="program-card">
+        <span class="program-flag">🇨🇳</span>
+        <div class="program-title">China Program</div>
+        <p class="program-desc">English tutoring for Chinese-speaking students, with lessons built around conversational skills, reading comprehension, and academic English.</p>
+      </div>
+      <div class="program-card">
+        <span class="program-flag">🇰🇷</span>
+        <div class="program-title">Korea Program</div>
+        <p class="program-desc">Sessions for Korean students focused on building vocabulary, pronunciation, and confidence in written and spoken English.</p>
+      </div>
+      <div class="program-card dashed">
+        <span class="program-flag">🌏</span>
+        <div class="program-title">Expanding Soon</div>
+        <p class="program-desc">We plan to grow to more regions. Interested in volunteering or partnering to bring ELP to your community?</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="section" id="tools">
+    <div class="section-label">How we meet</div>
+    <div class="section-title">Our platforms</div>
+    <br>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-icon">🎥</div>
+        <div>
+          <div class="tool-name">VooV/Tencent Meeting</div>
+          <div class="tool-purpose">International video calls</div>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">📄</div>
+        <div>
+          <div class="tool-name">QQ Docs</div>
+          <div class="tool-purpose">Assignments & materials</div>
+        </div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">💬</div>
+        <div>
+          <div class="tool-name">WeChat</div>
+          <div class="tool-purpose">Student communication</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="cta-section">
+    <div class="section-title">Ready to get involved?</div>
+    <p class="section-subtitle" style="margin: 0 auto 2rem; max-width: 460px;">Whether you want to volunteer as a tutor, refer a student, or simply learn more — we'd love to hear from you.</p>
+    <a href="#" class="btn-primary" onclick="showPage('contact')">Contact us →</a>
+  </section>
+
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="page-contact" class="page">
+
+  <section class="contact-hero">
+    <span class="hero-tag">Get in touch</span>
+    <h1 style="font-family:'Playfair Display',serif;font-size:48px;font-weight:600;line-height:1.15;letter-spacing:-0.02em;margin-bottom:1rem;">Contact us</h1>
+    <p style="font-size:17px;font-weight:300;color:var(--text-secondary);max-width:500px;margin:0 auto;">Have questions about our programs, want to volunteer, or looking to enroll a student? Reach out and we'll get back to you soon.</p>
+  </section>
+
+  <div class="contact-body">
+    <div class="contact-inner">
+
+      <div>
+        <div class="section-label" style="margin-bottom:1.5rem;">Reach us on</div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M13 7.5C13 10.537 10.761 13 8 13c-.587 0-1.15-.1-1.672-.28L4 13.5l.594-2.117A5.07 5.07 0 0 1 3 8c0-3.037 2.239-5.5 5-5.5s5 2.463 5 5z" stroke="#185FA5" stroke-width="1.2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-label">WeChat</div>
+            <div class="contact-value">Preferred for student communication. </div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 16 16" fill="none">
+              <rect x="2" y="3.5" width="12" height="9" rx="1.5" stroke="#185FA5" stroke-width="1.2"/>
+              <path d="M2 5.5l6 4 6-4" stroke="#185FA5" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">englishliteracyprojectofficial@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="6" stroke="#185FA5" stroke-width="1.2"/>
+              <path d="M8 4.5v3.5l2 2" stroke="#185FA5" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="student-note">
+          <div class="student-note-title">For students in China & Korea</div>
+          <div class="student-note-body">We host sessions on Tencent Meeting and VooV. Assignments are shared via QQ Docs. All tools are free and easy to set up.</div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send us a message</h3>
+        <div id="form-content">
+          <div class="form-group">
+            <label for="cf-name">Your name</label>
+            <input type="text" id="cf-name" placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email address</label>
+            <input type="email" id="cf-email" placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="cf-role">I am a...</label>
+            <select id="cf-role">
+              <option value="">Select one</option>
+              <option>Prospective student</option>
+              <option>Parent or guardian</option>
+              <option>Volunteer tutor</option>
+              <option>Partner organization</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" placeholder="Tell us a bit about yourself or your question..."></textarea>
+          </div>
+          <button class="btn-primary btn-full" onclick="submitForm()">Send message</button>
+        </div>
+
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">✓</div>
+          <h4>Message sent!</h4>
+          <p>Thanks for reaching out. We'll be in touch soon.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 English Literacy Project
+</footer>
+
+<script>
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + name).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function submitForm() {
+    const name = document.getElementById('cf-name').value.trim();
+    const email = document.getElementById('cf-email').value.trim();
+    if (!name || !email) {
+      alert('Please fill in your name and email address.');
+      return;
+    }
+    document.getElementById('form-content').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+</script>
+
 </body>
 </html>
