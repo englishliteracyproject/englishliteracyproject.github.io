@@ -275,7 +275,7 @@
  
     .section-title {
       font-family: 'Press Start 2P', monospace;
-      font-size: clamp(14px, 2.5vw, 22px);
+      font-size: clamp(14px, 5vw, 22px);
       color: var(--navy);
       line-height: 1.6;
       margin-bottom: 0.75rem;
@@ -304,6 +304,13 @@
       border-top: 4px dashed var(--muted);
       margin: 0 2rem;
       opacity: 0.35;
+    }
+
+    .section-connect {
+      padding: 4rem 2rem;
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
     }
  
     /* ─── SIGNUP BANNER ──────────────────────── */
