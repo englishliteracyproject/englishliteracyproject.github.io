@@ -392,6 +392,102 @@
     .tool-name { font-family: 'Silkscreen', monospace; font-size: 11px; color: var(--white); }
     .tool-purpose { font-size: 16px; color: var(--sky); margin-top: 3px; }
  
+    /* ─── OUR REACH / MAP ────────────────────── */
+    .reach-map-wrap {
+      background: var(--paper);
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .reach-map { width: 100%; height: auto; display: block; }
+    .map-ocean { fill: var(--sky); opacity: 0.3; }
+    .map-land > rect {
+      fill: var(--land);
+      stroke: var(--paper);
+      stroke-width: 3;
+    }
+    .pin-halo {
+      fill: var(--gold);
+      stroke: var(--navy);
+      stroke-width: 4;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pin-pulse 1.6s steps(6) infinite;
+    }
+    .pin-flag {
+      font-size: 26px;
+      text-anchor: middle;
+      pointer-events: none;
+    }
+    @keyframes pin-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+    .reach-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .reach-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--paper);
+      border: 3px solid var(--navy);
+      box-shadow: 4px 4px 0 var(--navy);
+      padding: 8px 14px;
+      font-family: 'Silkscreen', monospace;
+      font-size: 11px;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .reach-flag { font-size: 20px; }
+
+    /* ─── SUMMER PILOT RECAP ─────────────────── */
+    .recap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: var(--navy);
+      border: 4px solid var(--gold);
+      box-shadow: 6px 6px 0 var(--amber);
+      padding: 1.25rem 1rem;
+      text-align: center;
+      transition: transform 0.08s, box-shadow 0.08s;
+    }
+    .stat-number {
+      font-family: 'Press Start 2P', monospace;
+      font-size: clamp(16px, 3vw, 24px);
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+      line-height: 1.4;
+    }
+    .stat-label {
+      font-family: 'Silkscreen', monospace;
+      font-size: 10px;
+      color: var(--sky);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .recap-highlights { list-style: none; }
+    .recap-highlights li {
+      position: relative;
+      padding: 10px 0 10px 26px;
+      border-bottom: 3px dashed rgba(11,34,68,0.25);
+      font-size: 17px;
+      color: var(--navy);
+    }
+    .recap-highlights li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: var(--ocean);
+    }
+    .recap-highlights li:last-child { border-bottom: none; }
+
     /* ─── SOCIAL ─────────────────────────────── */
     .social-grid {
       display: grid;
