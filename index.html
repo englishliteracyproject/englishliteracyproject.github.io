@@ -455,12 +455,7 @@
   }
  
   // ── FORM ──────────────────────────────────────
-  const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSctioUpy0QL6zZq0U9fqxC9eXqrAhP5qfBqRzezOaoIsEcZUQ/formResponse';
-  const GOOGLE_FORM_FIELDS = {
-    name: 'entry.1132806696',
-    email: 'entry.464370871',
-    message: 'entry.842220475'
-  };
+  const FORMSPREE_ACTION = 'https://formspree.io/f/xqpaeeyj';
 
   function submitForm() {
     const name    = document.getElementById('cf-name').value.trim();
@@ -469,25 +464,28 @@
     const message = document.getElementById('cf-message').value.trim();
     if (!name || !email) { alert('Please fill in your name and email.'); return; }
 
-    const fullMessage = role ? `[${role}] ${message}` : message;
+    const payload = { name, email, role, message };
 
-    const formData = new FormData();
-    formData.append(GOOGLE_FORM_FIELDS.name, name);
-    formData.append(GOOGLE_FORM_FIELDS.email, email);
-    formData.append(GOOGLE_FORM_FIELDS.message, fullMessage);
-
-    fetch(GOOGLE_FORM_ACTION, {
+    fetch(FORMSPREE_ACTION, {
       method: 'POST',
-      mode: 'no-cors',
-      body: formData
-    }).catch(() => {
-      // Google Forms doesn't return a readable response in no-cors mode,
-      // and network errors here are rare — we still show success below
-      // since the request is fire-and-forget.
+      headers: { 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById('form-content').style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        response.json().then(data => {
+          console.error('Formspree error:', data);
+          alert('Sorry, something went wrong sending your message. Please try again or email us directly.');
+        });
+      }
+    })
+    .catch(err => {
+      console.error('Network error:', err);
+      alert('Sorry, something went wrong sending your message. Please check your connection and try again.');
     });
-
-    document.getElementById('form-content').style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
   }
  
 
