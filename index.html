@@ -455,10 +455,37 @@
   }
  
   // ── FORM ──────────────────────────────────────
+  const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSctioUpy0QL6zZq0U9fqxC9eXqrAhP5qfBqRzezOaoIsEcZUQ/formResponse';
+  const GOOGLE_FORM_FIELDS = {
+    name: 'entry.1132806696',
+    email: 'entry.464370871',
+    message: 'entry.842220475'
+  };
+
   function submitForm() {
-    const name  = document.getElementById('cf-name').value.trim();
-    const email = document.getElementById('cf-email').value.trim();
+    const name    = document.getElementById('cf-name').value.trim();
+    const email   = document.getElementById('cf-email').value.trim();
+    const role    = document.getElementById('cf-role').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
     if (!name || !email) { alert('Please fill in your name and email.'); return; }
+
+    const fullMessage = role ? `[${role}] ${message}` : message;
+
+    const formData = new FormData();
+    formData.append(GOOGLE_FORM_FIELDS.name, name);
+    formData.append(GOOGLE_FORM_FIELDS.email, email);
+    formData.append(GOOGLE_FORM_FIELDS.message, fullMessage);
+
+    fetch(GOOGLE_FORM_ACTION, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    }).catch(() => {
+      // Google Forms doesn't return a readable response in no-cors mode,
+      // and network errors here are rare — we still show success below
+      // since the request is fire-and-forget.
+    });
+
     document.getElementById('form-content').style.display = 'none';
     document.getElementById('form-success').style.display = 'block';
   }
