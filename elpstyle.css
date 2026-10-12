@@ -575,6 +575,17 @@
       max-width: 480px;
       margin: 0 auto;
     }
+    
+    .page-hero .org-status {
+      margin: 1.25rem auto 0;
+      max-width: 620px;
+      font-size: 16px;
+      color: var(--cream);
+      background: rgba(91, 174, 224, 0.12);
+      border: 2px solid var(--sky);
+      padding: 10px 16px;
+    }
+
  
     /* pixel divider strip */
     .pixel-strip {
