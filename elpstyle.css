@@ -823,9 +823,296 @@
     }
  
     /* ─── RESPONSIVE ─────────────────────────── */
-    @media (max-width: 700px) {
-      .hero h1 { font-size: 16px; }
-      .contact-inner { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-      .team-row.grid4 { grid-template-columns: repeat(2, 1fr); }
-    }
+    
+/* ─── RESPONSIVE LAYOUT ─────────────────────── */
+
+@media (max-width: 700px) {
+
+  /* NAVBAR: keep all five buttons visible */
+  nav {
+    height: auto;
+    min-height: 64px;
+    padding: 8px 10px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .nav-logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .nav-links li {
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-links li:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-links a {
+    height: auto;
+    line-height: 1.3;
+    padding: 10px 8px;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+  }
+
+  /* HERO: prevent the 350px logo from overflowing */
+  .hero {
+    min-height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-left img {
+    display: block;
+    width: min(260px, 75vw);
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0 auto;
+  }
+
+  .hero-right {
+    text-align: center;
+  }
+
+  .hero-right p {
+    font-size: 17px;
+  }
+
+  .hero-cta {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    max-width: 100%;
+    font-size: 11px;
+    padding: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  /* SECTIONS: reclaim horizontal space */
+  .section,
+  .section-connect {
+    width: 100%;
+    max-width: 100%;
+    padding: 2.5rem 1rem;
+  }
+
+  .section-connect {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .section-title {
+    overflow-wrap: anywhere;
+  }
+
+  .section-sub {
+    font-size: 18px;
+  }
+
+  hr.divider-dashed {
+    margin: 0 1rem;
+  }
+
+  /* GRIDS: prevent cards from forcing overflow */
+  .programs-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .recap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .social-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .program-card,
+  .tool-card,
+  .stat-card,
+  .social-card {
+    min-width: 0;
+  }
+
+  .tool-name,
+  .social-sub {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* WORLD MAP */
+  .reach-map-wrap {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+
+  .reach-map {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .reach-legend {
+    gap: 10px;
+  }
+
+  .reach-item {
+    max-width: 100%;
+    padding: 8px;
+    font-size: 9px;
+  }
+
+  /* TEAM: fix cards wider than their grid columns */
+  .team-body {
+    width: 100%;
+    max-width: 100%;
+    padding: 2.5rem 1rem;
+  }
+
+  .team-row.grid4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .team-row:not(.grid4) {
+    gap: 12px;
+  }
+
+  .team-row:not(.grid4) .person {
+    flex: 1 1 120px;
+  }
+
+  .person {
+    min-width: 0;
+    width: 100%;
+    padding: 0.75rem 0.4rem;
+  }
+
+  .person-avatar {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 6 / 7;
+    object-fit: cover;
+  }
+
+  .person h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .team-section-label {
+    max-width: 100%;
+    font-size: 10px;
+  }
+
+  /* CONTACT: stack columns and reduce padding */
+  .contact-body {
+    padding: 2.5rem 1rem;
+  }
+
+  .contact-inner {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .contact-inner > *,
+  .contact-form {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+  }
+
+  .contact-value {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* SIGNUP: fit long button text to the screen */
+  .signup-wrap {
+    padding: 1.25rem 1rem;
+  }
+
+  .signup {
+    max-width: 100%;
+    padding: 1rem;
+    font-size: 11px;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* BOTTOM CTA */
+  .cta-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .cta-content {
+    flex-direction: column;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .cta-content img {
+    width: min(180px, 65vw);
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  footer {
+    padding: 1.25rem 1rem;
+    font-size: 9px;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 360px) {
+  .nav-links a {
+    padding: 9px 5px;
+    font-size: 10px;
+  }
+
+  .team-row.grid4 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .recap-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
