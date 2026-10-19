@@ -488,6 +488,48 @@
     }
     .recap-highlights li:last-child { border-bottom: none; }
 
+    
+    .fundraising-gallery {    
+      margin-top: 2.5rem;
+    }
+
+    .fundraising-gallery .section-title {
+      margin-bottom: 1.5rem;
+    }
+
+    .fundraising-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .fundraising-photo {
+      padding: 0;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+    }
+
+    .fundraising-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .fundraising-caption {
+      margin: 1rem 0 0;
+      text-align: center;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .fundraising-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
     /* ─── SOCIAL ─────────────────────────────── */
     .social-grid {
       display: grid;
