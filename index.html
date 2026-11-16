@@ -1,539 +1,862 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Literacy Project</title>
   <link rel="stylesheet" href="elpstyle.css">
   <link rel="icon" type="image/png" href="images/elplogo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
 </head>
+
 <body>
 
 
- 
-<!-- NAV -->
-<nav>
-  <a class="nav-logo" href="#" onclick="showPage('home')">
-    <img src="images/elplogo.png" alt="ELP Logo">
-  </a>
-  <ul class="nav-links">
-    <li><a href="#" onclick="showPage('home')">Home</a></li>
-    <li><a href="#programs" onclick="showPage('home')">Programs</a></li>
-    <li><a href="#connect" onclick="showPage('home')">Connect</a></li>
-    <li><a href="#" onclick="showPage('ourteam')">Our Team</a></li>
-    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-  </ul>
-</nav>
- 
-<!-- ══════════════════════════════════════════ -->
-<!-- HOME PAGE                                   -->
-<!-- ══════════════════════════════════════════ -->
-<div id="page-home" class="page active">
- 
-  <!-- HERO -->
-  <section class="hero">
-  <div class="hero-stars"></div>
 
-  <div class="hero-content">
-    
-    <!-- LEFT: LOGO -->
-    <div class="hero-left">
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#" onclick="showPage('home')">
       <img src="images/elplogo.png" alt="ELP Logo">
-    </div>
-
-    <!-- RIGHT: TEXT + BUTTONS -->
-    <div class="hero-right">
-      <p>
-        We provide accessible English tutoring for students abroad, offering 
-        personalized classes and immersive language exposure at an international scale.
-      </p>
-
-      <div class="hero-cta">
-        <a href="#" class="btn-primary" onclick="showPage('contact')">▶ GET INVOLVED</a>
-        <a href="#programs" class="btn-secondary">◆ OUR PROGRAMS</a>
-      </div>
-    </div>
-
-  </div>
-</section>
- 
-  <!-- pixel color strip -->
-  <div class="pixel-strip"></div>
- 
-
- 
-  <!-- SIGNUP BANNER -->
-  <div class="signup-wrap">
-    <a href="https://forms.gle/qE9w2Fsqn5RjhF536" target="_blank" class="signup">
-      SIGN UP TO BECOME A TUTOR!
     </a>
-  </div>
- 
-  <hr class="divider">
- 
-  <!-- PROGRAMS -->
-  <section class="section" id="programs">
-    <div class="section-tag">// Programs</div>
-    <div class="section-title">OUR <em>PROGRAMS</em></div>
-    <div class="programs-grid">
-      <div class="program-card">
-        <span class="program-flag">🇨🇳</span>
-        <div class="program-title">CHINA PROGRAM</div>
-        <p class="program-desc">English tutoring for Chinese-speaking students, with lessons built around conversational skills, reading comprehension, and academic English.</p>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home')">Home</a></li>
+      <li><a href="#programs" onclick="showPage('home')">Programs</a></li>
+      <li><a href="#connect" onclick="showPage('home')">Connect</a></li>
+      <li><a href="#" onclick="showPage('ourteam')">Our Team</a></li>
+      <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+    </ul>
+    <button id="lang-toggle" onclick="toggleLanguage()">
+      中文
+    </button>
+  </nav>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- HOME PAGE                                   -->
+  <!-- ══════════════════════════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-stars"></div>
+
+      <div class="hero-content">
+
+        <!-- LEFT: LOGO -->
+        <div class="hero-left">
+          <img src="images/elplogo.png" alt="ELP Logo">
+        </div>
+
+        <!-- RIGHT: TEXT + BUTTONS -->
+        <div class="hero-right">
+          <p>
+            We provide accessible English tutoring for students abroad, offering
+            personalized classes and immersive language exposure at an international scale.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#" class="btn-primary" onclick="showPage('contact')">▶ GET INVOLVED</a>
+            <a href="#programs" class="btn-secondary">◆ OUR PROGRAMS</a>
+          </div>
+        </div>
+
       </div>
-      
-      <div class="program-card">
-        <span class="program-flag">📚</span>
-        <div class="program-title">ELEMENTARY ESOL</div>
-        <p class="program-desc">
-          We're expanding into elementary-school ESOL programs to help
-          younger English learners build language skills and confidence.
+    </section>
+
+    <!-- pixel color strip -->
+    <div class="pixel-strip"></div>
+
+
+
+    <!-- SIGNUP BANNER -->
+    <div class="signup-wrap">
+      <a href="https://forms.gle/qE9w2Fsqn5RjhF536" target="_blank" class="signup">
+        SIGN UP TO BECOME A TUTOR!
+      </a>
+    </div>
+
+    <hr class="divider">
+
+    <!-- PROGRAMS -->
+    <section class="section" id="programs">
+      <div class="section-tag">// Programs</div>
+      <div class="section-title">OUR <em>PROGRAMS</em></div>
+      <div class="programs-grid">
+        <div class="program-card">
+          <span class="program-flag">🇨🇳</span>
+          <div class="program-title">CHINA PROGRAM</div>
+          <p class="program-desc">English tutoring for Chinese-speaking students, with lessons built around
+            conversational skills, reading comprehension, and academic English.</p>
+        </div>
+
+        <div class="program-card">
+          <span class="program-flag">📚</span>
+          <div class="program-title">ELEMENTARY ESOL</div>
+          <p class="program-desc">
+            We're expanding into elementary-school ESOL programs to help
+            younger English learners build language skills and confidence.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="divider-dashed">
+
+    <!-- OUR REACH / MAP -->
+    <section class="section" id="reach">
+      <div class="section-tag">// Our Reach</div>
+      <div class="section-title">COUNTRIES WE'VE <em>REACHED</em></div>
+      <p class="section-sub">Here's where ELP students and tutors connect from.</p>
+
+      <div class="reach-map-wrap pixel-box">
+        <svg viewBox="0 0 1000 500" class="reach-map" xmlns="http://www.w3.org/2000/svg" role="img"
+          aria-label="World map showing countries ELP has reached: China, United States, Canada, Switzerland, and Ireland">
+          <rect x="0" y="0" width="1000" height="500" class="map-ocean" />
+
+          <!-- North America -->
+          <g class="map-land">
+            <rect x="100" y="50" width="50" height="50" />
+            <rect x="150" y="50" width="50" height="50" />
+            <rect x="200" y="50" width="50" height="50" />
+            <rect x="250" y="50" width="50" height="50" />
+            <rect x="100" y="100" width="50" height="50" />
+            <rect x="150" y="100" width="50" height="50" />
+            <rect x="200" y="100" width="50" height="50" />
+            <rect x="250" y="100" width="50" height="50" />
+            <rect x="300" y="100" width="50" height="50" />
+            <rect x="100" y="150" width="50" height="50" />
+            <rect x="150" y="150" width="50" height="50" />
+            <rect x="200" y="150" width="50" height="50" />
+            <rect x="150" y="200" width="50" height="50" />
+            <rect x="200" y="200" width="50" height="50" />
+          </g>
+
+          <!-- South America -->
+          <g class="map-land">
+            <rect x="250" y="250" width="50" height="50" />
+            <rect x="300" y="250" width="50" height="50" />
+            <rect x="250" y="300" width="50" height="50" />
+            <rect x="300" y="300" width="50" height="50" />
+            <rect x="250" y="350" width="50" height="50" />
+            <rect x="250" y="400" width="50" height="50" />
+          </g>
+
+          <!-- Europe -->
+          <g class="map-land">
+            <rect x="450" y="50" width="50" height="50" />
+            <rect x="500" y="50" width="50" height="50" />
+            <rect x="450" y="100" width="50" height="50" />
+            <rect x="500" y="100" width="50" height="50" />
+            <rect x="550" y="100" width="50" height="50" />
+            <rect x="500" y="150" width="50" height="50" />
+          </g>
+
+          <!-- Africa -->
+          <g class="map-land">
+            <rect x="500" y="150" width="50" height="50" />
+            <rect x="550" y="150" width="50" height="50" />
+            <rect x="450" y="200" width="50" height="50" />
+            <rect x="500" y="200" width="50" height="50" />
+            <rect x="550" y="200" width="50" height="50" />
+            <rect x="600" y="200" width="50" height="50" />
+            <rect x="450" y="250" width="50" height="50" />
+            <rect x="500" y="250" width="50" height="50" />
+            <rect x="550" y="250" width="50" height="50" />
+            <rect x="500" y="300" width="50" height="50" />
+            <rect x="550" y="300" width="50" height="50" />
+            <rect x="500" y="350" width="50" height="50" />
+          </g>
+
+          <!-- Asia -->
+          <g class="map-land">
+            <rect x="650" y="0" width="50" height="50" />
+            <rect x="700" y="0" width="50" height="50" />
+            <rect x="750" y="0" width="50" height="50" />
+            <rect x="600" y="50" width="50" height="50" />
+            <rect x="650" y="50" width="50" height="50" />
+            <rect x="700" y="50" width="50" height="50" />
+            <rect x="750" y="50" width="50" height="50" />
+            <rect x="800" y="50" width="50" height="50" />
+            <rect x="600" y="100" width="50" height="50" />
+            <rect x="650" y="100" width="50" height="50" />
+            <rect x="700" y="100" width="50" height="50" />
+            <rect x="750" y="100" width="50" height="50" />
+            <rect x="800" y="100" width="50" height="50" />
+            <rect x="850" y="100" width="50" height="50" />
+            <rect x="650" y="150" width="50" height="50" />
+            <rect x="700" y="150" width="50" height="50" />
+            <rect x="750" y="150" width="50" height="50" />
+            <rect x="800" y="150" width="50" height="50" />
+            <rect x="850" y="150" width="50" height="50" />
+            <rect x="900" y="150" width="50" height="50" />
+            <rect x="700" y="200" width="50" height="50" />
+            <rect x="750" y="200" width="50" height="50" />
+            <rect x="800" y="200" width="50" height="50" />
+          </g>
+
+          <!-- Australia -->
+          <g class="map-land">
+            <rect x="800" y="350" width="50" height="50" />
+            <rect x="850" y="350" width="50" height="50" />
+            <rect x="900" y="350" width="50" height="50" />
+            <rect x="800" y="400" width="50" height="50" />
+            <rect x="850" y="400" width="50" height="50" />
+          </g>
+
+          <!-- Country pins -->
+          <g class="map-pin">
+            <circle cx="225" cy="75" r="22" class="pin-halo" />
+            <text x="225" y="86" class="pin-flag">🇨🇦</text>
+          </g>
+          <g class="map-pin">
+            <circle cx="175" cy="125" r="22" class="pin-halo" />
+            <text x="175" y="136" class="pin-flag">🇺🇸</text>
+          </g>
+          <g class="map-pin">
+            <circle cx="475" cy="75" r="22" class="pin-halo" />
+            <text x="475" y="86" class="pin-flag">🇮🇪</text>
+          </g>
+          <g class="map-pin">
+            <circle cx="525" cy="125" r="22" class="pin-halo" />
+            <text x="525" y="136" class="pin-flag">🇨🇭</text>
+          </g>
+          <g class="map-pin">
+            <circle cx="775" cy="125" r="22" class="pin-halo" />
+            <text x="775" y="136" class="pin-flag">🇨🇳</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="reach-legend">
+        <div class="reach-item"><span class="reach-flag">🇨🇳</span> China</div>
+        <div class="reach-item"><span class="reach-flag">🇺🇸</span> United States</div>
+        <div class="reach-item"><span class="reach-flag">🇨🇦</span> Canada</div>
+        <div class="reach-item"><span class="reach-flag">🇨🇭</span> Switzerland</div>
+        <div class="reach-item"><span class="reach-flag">🇮🇪</span> Ireland</div>
+      </div>
+    </section>
+
+    <hr class="divider-dashed">
+
+    <!-- HOW WE MEET -->
+    <section class="section" id="tools">
+      <div class="section-tag">// How We Meet</div>
+      <div class="section-title">OUR <em>PLATFORMS</em></div>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-icon">🎥</div>
+          <div>
+            <div class="tool-name">VooV / Tencent Meeting</div>
+            <div class="tool-purpose">International video calls</div>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-icon">📄</div>
+          <div>
+            <div class="tool-name">PowerPoint</div>
+            <div class="tool-purpose">Weekly lesson materials</div>
+          </div>
+        </div>
+
+
+        <div class="tool-card">
+          <div class="tool-icon">💬</div>
+          <div>
+            <div class="tool-name">Email & WeChat</div>
+            <div class="tool-purpose">Communication and coordination</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="divider-dashed">
+
+    <!-- SUMMER PILOT RECAP -->
+    <section class="section" id="recap">
+      <div class="section-tag">// Summer Pilot 2026</div>
+      <div class="section-title">SUMMER PILOT PROGRAM <em>RECAP</em></div>
+      <p class="section-sub">In four weeks, our Summer Pilot helped over 40 students across five countries gain the
+        skills and confidence to speak English with ease.</p>
+
+      <div class="recap-grid">
+        <div class="stat-card">
+          <div class="stat-number">40+</div>
+          <div class="stat-label">Students Taught</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">60+</div>
+          <div class="stat-label">Students signed up for homework</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Pilot Countries</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">$600+</div>
+          <div class="stat-label">Raised</div>
+        </div>
+
+      </div>
+
+      <ul class="recap-highlights">
+        <li>Week 1: Students learning English pronunciation</li>
+        <li>Week 2: Introduction to American culture + application outside of textbook</li>
+        <li>Week 3: Students ranging from 5-50 learned about activities, experiences, and school life</li>
+        <li>Week 4: ELP students finished our pilot program! They gained confidence and practice in using English</li>
+      </ul>
+
+      <div class="fundraising-gallery">
+        <div class="section-title">FUNDRAISING <em>HIGHLIGHTS</em></div>
+
+        <div class="fundraising-grid">
+          <div class="fundraising-photo pixel-box">
+            <img src="images/bakesale2.jpeg" alt="ELP bake sale fundraiser">
+          </div>
+          <div class="fundraising-photo pixel-box">
+            <img src="images/bakesale1.jpeg" alt="Bake sale fundraising event">
+          </div>
+        </div>
+        <p class="fundraising-caption">
+          Our bake sale fundraiser — Rosie, Calvin, Jason (left to right) — raised over $600 for our Summer Pilot
+          program!
         </p>
       </div>
+    </section>
 
-    </div>
-  </section>
- 
-  <hr class="divider-dashed">
- 
-  <!-- OUR REACH / MAP -->
-  <section class="section" id="reach">
-    <div class="section-tag">// Our Reach</div>
-    <div class="section-title">COUNTRIES WE'VE <em>REACHED</em></div>
-    <p class="section-sub">Here's where ELP students and tutors connect from.</p>
+    <hr class="divider-dashed">
 
-    <div class="reach-map-wrap pixel-box">
-      <svg viewBox="0 0 1000 500" class="reach-map" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map showing countries ELP has reached: China, United States, Canada, Switzerland, and Ireland">
-        <rect x="0" y="0" width="1000" height="500" class="map-ocean"/>
+    <!-- CONNECT / SOCIAL -->
+    <section class="section-connect" id="connect">
+      <div class="connect-text">
+        <div class="section-title">STAY CONNECTED</div>
+        <p class="section-sub">Join our communities for updates, announcements, and more.</p>
+      </div>
+      <div class="social-grid">
+        <a href="https://discord.gg/Qs9te3c6eh" target="_blank" class="social-card discord">
+          <div class="social-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+              <path
+                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+            </svg>
+          </div>
+          <div>
+            <div class="social-name">Discord</div>
+            <div class="social-sub">Join our server</div>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/englishliteracyprojectofficial/" target="_blank"
+          class="social-card instagram">
+          <div class="social-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+            </svg>
+          </div>
+          <div>
+            <div class="social-name">Instagram</div>
+            <div class="social-sub">@englishliteracyprojectofficial</div>
+          </div>
+        </a>
+        <a href="mailto:englishliteracyprojectofficial@gmail.com" class="social-card email">
+          <div class="social-icon">📧</div>
+          <div>
+            <div class="social-name">Email</div>
+            <div class="social-sub">englishliteracyprojectofficial@gmail.com</div>
+          </div>
+        </a>
+      </div>
+    </section>
 
-        <!-- North America -->
-        <g class="map-land">
-          <rect x="100" y="50" width="50" height="50"/><rect x="150" y="50" width="50" height="50"/><rect x="200" y="50" width="50" height="50"/><rect x="250" y="50" width="50" height="50"/>
-          <rect x="100" y="100" width="50" height="50"/><rect x="150" y="100" width="50" height="50"/><rect x="200" y="100" width="50" height="50"/><rect x="250" y="100" width="50" height="50"/><rect x="300" y="100" width="50" height="50"/>
-          <rect x="100" y="150" width="50" height="50"/><rect x="150" y="150" width="50" height="50"/><rect x="200" y="150" width="50" height="50"/>
-          <rect x="150" y="200" width="50" height="50"/><rect x="200" y="200" width="50" height="50"/>
-        </g>
-
-        <!-- South America -->
-        <g class="map-land">
-          <rect x="250" y="250" width="50" height="50"/><rect x="300" y="250" width="50" height="50"/>
-          <rect x="250" y="300" width="50" height="50"/><rect x="300" y="300" width="50" height="50"/>
-          <rect x="250" y="350" width="50" height="50"/>
-          <rect x="250" y="400" width="50" height="50"/>
-        </g>
-
-        <!-- Europe -->
-        <g class="map-land">
-          <rect x="450" y="50" width="50" height="50"/><rect x="500" y="50" width="50" height="50"/>
-          <rect x="450" y="100" width="50" height="50"/><rect x="500" y="100" width="50" height="50"/><rect x="550" y="100" width="50" height="50"/>
-          <rect x="500" y="150" width="50" height="50"/>
-        </g>
-
-        <!-- Africa -->
-        <g class="map-land">
-          <rect x="500" y="150" width="50" height="50"/><rect x="550" y="150" width="50" height="50"/>
-          <rect x="450" y="200" width="50" height="50"/><rect x="500" y="200" width="50" height="50"/><rect x="550" y="200" width="50" height="50"/><rect x="600" y="200" width="50" height="50"/>
-          <rect x="450" y="250" width="50" height="50"/><rect x="500" y="250" width="50" height="50"/><rect x="550" y="250" width="50" height="50"/>
-          <rect x="500" y="300" width="50" height="50"/><rect x="550" y="300" width="50" height="50"/>
-          <rect x="500" y="350" width="50" height="50"/>
-        </g>
-
-        <!-- Asia -->
-        <g class="map-land">
-          <rect x="650" y="0" width="50" height="50"/><rect x="700" y="0" width="50" height="50"/><rect x="750" y="0" width="50" height="50"/>
-          <rect x="600" y="50" width="50" height="50"/><rect x="650" y="50" width="50" height="50"/><rect x="700" y="50" width="50" height="50"/><rect x="750" y="50" width="50" height="50"/><rect x="800" y="50" width="50" height="50"/>
-          <rect x="600" y="100" width="50" height="50"/><rect x="650" y="100" width="50" height="50"/><rect x="700" y="100" width="50" height="50"/><rect x="750" y="100" width="50" height="50"/><rect x="800" y="100" width="50" height="50"/><rect x="850" y="100" width="50" height="50"/>
-          <rect x="650" y="150" width="50" height="50"/><rect x="700" y="150" width="50" height="50"/><rect x="750" y="150" width="50" height="50"/><rect x="800" y="150" width="50" height="50"/><rect x="850" y="150" width="50" height="50"/><rect x="900" y="150" width="50" height="50"/>
-          <rect x="700" y="200" width="50" height="50"/><rect x="750" y="200" width="50" height="50"/><rect x="800" y="200" width="50" height="50"/>
-        </g>
-
-        <!-- Australia -->
-        <g class="map-land">
-          <rect x="800" y="350" width="50" height="50"/><rect x="850" y="350" width="50" height="50"/><rect x="900" y="350" width="50" height="50"/>
-          <rect x="800" y="400" width="50" height="50"/><rect x="850" y="400" width="50" height="50"/>
-        </g>
-
-        <!-- Country pins -->
-        <g class="map-pin">
-          <circle cx="225" cy="75" r="22" class="pin-halo"/>
-          <text x="225" y="86" class="pin-flag">🇨🇦</text>
-        </g>
-        <g class="map-pin">
-          <circle cx="175" cy="125" r="22" class="pin-halo"/>
-          <text x="175" y="136" class="pin-flag">🇺🇸</text>
-        </g>
-        <g class="map-pin">
-          <circle cx="475" cy="75" r="22" class="pin-halo"/>
-          <text x="475" y="86" class="pin-flag">🇮🇪</text>
-        </g>
-        <g class="map-pin">
-          <circle cx="525" cy="125" r="22" class="pin-halo"/>
-          <text x="525" y="136" class="pin-flag">🇨🇭</text>
-        </g>
-        <g class="map-pin">
-          <circle cx="775" cy="125" r="22" class="pin-halo"/>
-          <text x="775" y="136" class="pin-flag">🇨🇳</text>
-        </g>
-      </svg>
-    </div>
-
-    <div class="reach-legend">
-      <div class="reach-item"><span class="reach-flag">🇨🇳</span> China</div>
-      <div class="reach-item"><span class="reach-flag">🇺🇸</span> United States</div>
-      <div class="reach-item"><span class="reach-flag">🇨🇦</span> Canada</div>
-      <div class="reach-item"><span class="reach-flag">🇨🇭</span> Switzerland</div>
-      <div class="reach-item"><span class="reach-flag">🇮🇪</span> Ireland</div>
-    </div>
-  </section>
- 
-  <hr class="divider-dashed">
- 
-  <!-- HOW WE MEET -->
-  <section class="section" id="tools">
-    <div class="section-tag">// How We Meet</div>
-    <div class="section-title">OUR <em>PLATFORMS</em></div>
-    <div class="tools-grid">
-      <div class="tool-card">
-        <div class="tool-icon">🎥</div>
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="hero-stars"></div>
+      <div class="cta-content">
+        <img src="images/elplogo.png" alt="ELP">
         <div>
-          <div class="tool-name">VooV / Tencent Meeting</div>
-          <div class="tool-purpose">International video calls</div>
+          <div class="section-title">READY TO GET INVOLVED?</div>
+          <p class="section-sub">Whether you want to volunteer as a tutor, refer a student, or simply learn more — we'd
+            love to hear from you.</p>
+          <a href="#" class="btn-primary" onclick="showPage('contact')">▶ CONTACT US</a>
         </div>
       </div>
-      
-      <div class="tool-card">
-        <div class="tool-icon">📄</div>
-        <div>
-          <div class="tool-name">PowerPoint</div>
-          <div class="tool-purpose">Weekly lesson materials</div>
+    </section>
+
+  </div><!-- end home -->
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- TEAM PAGE                                   -->
+  <!-- ══════════════════════════════════════════ -->
+  <div id="page-ourteam" class="page">
+    <div class="page-hero">
+      <div class="hero-stars"></div>
+      <div class="page-hero-content">
+        <div class="hero-tag">Bios</div>
+        <h1>OUR TEAM</h1>
+        <p>Meet the dedicated leaders behind ELP</p>
+        <p class="org-status">
+          ELP is officially registered with the state of Virginia
+          and advised by adults.
+        </p>
+      </div>
+    </div>
+    <div class="pixel-strip"></div>
+
+    <div class="team-body">
+      <div class="team-section-label">▶ PRESIDENTS</div>
+      <div class="team-row">
+        <div class="person">
+          <img class="person-avatar" src="images/rosie.png" alt="Rosie L.">
+          <h3>Rosie L.</h3>
+          <p>President</p>
+        </div>
+        <div class="person">
+          <img class="person-avatar" src="images/jason.png" alt="Jason Y.">
+          <h3>Jason Y.</h3>
+          <p>President</p>
         </div>
       </div>
 
-      
-      <div class="tool-card">
-        <div class="tool-icon">💬</div>
-        <div>
-          <div class="tool-name">Email & WeChat</div>
-          <div class="tool-purpose">Communication and coordination</div>
+      <div class="team-section-label">▶ TEAM</div>
+      <div class="team-row grid4">
+        <div class="person"><img class="person-avatar" src="images/abby.png" alt="Abby C.">
+          <h3>Abby C.</h3>
+          <p>Program Director</p>
+        </div>
+        <div class="person"><img class="person-avatar" src="images/caroline.png" alt="Caroline F.">
+          <h3>Caroline F.</h3>
+          <p>Program Director</p>
+        </div>
+        <div class="person"><img class="person-avatar" src="images/oliver.png" alt="Oliver W.">
+          <h3>Oliver W.</h3>
+          <p>Program Director</p>
+        </div>
+        <div class="person"><img class="person-avatar" src="images/ellina.png" alt="Ellina S.">
+          <h3>Ellina S.</h3>
+          <p>Chinese Program Director</p>
+        </div>
+        <div class="person"><img class="person-avatar" src="images/ethan.png" alt="Ethan B.">
+          <h3>Ethan B.</h3>
+          <p>Secretary</p>
+        </div>
+        <div class="person"><img class="person-avatar" src="images/calvin.png" alt="Calvin H.">
+          <h3>Calvin H.</h3>
+          <p>Treasurer</p>
+        </div>
+        <div class="person"><img class="person-avatar" src="images/daisy.png" alt="Daisy L.">
+          <h3>Daisy L.</h3>
+          <p>Director of Tech</p>
         </div>
       </div>
-
-    </div>
-  </section>
- 
-  <hr class="divider-dashed">
- 
-  <!-- SUMMER PILOT RECAP -->
-  <section class="section" id="recap">
-    <div class="section-tag">// Summer Pilot 2026</div>
-    <div class="section-title">SUMMER PILOT PROGRAM <em>RECAP</em></div>
-    <p class="section-sub">In four weeks, our Summer Pilot helped over 40 students across five countries gain the skills and confidence to speak English with ease.</p>
-
-    <div class="recap-grid">
-      <div class="stat-card">
-        <div class="stat-number">40+</div>
-        <div class="stat-label">Students Taught</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">60+</div>
-        <div class="stat-label">Students signed up for homework</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">5</div>
-        <div class="stat-label">Pilot Countries</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">$600+</div>
-        <div class="stat-label">Raised</div>
-      </div>
-
-    </div>
-
-    <ul class="recap-highlights">
-      <li>Week 1: Students learning English pronunciation</li>
-      <li>Week 2: Introduction to American culture + application outside of textbook</li>
-      <li>Week 3: Students ranging from 5-50 learned about activities, experiences, and school life</li>
-      <li>Week 4: ELP students finished our pilot program! They gained confidence and practice in using English</li>
-    </ul>
-
-    <div class="fundraising-gallery">
-      <div class="section-title">FUNDRAISING <em>HIGHLIGHTS</em></div>
-  
-      <div class="fundraising-grid">
-        <div class="fundraising-photo pixel-box">
-          <img src="images/bakesale2.jpeg" alt="ELP bake sale fundraiser">
-        </div>
-        <div class="fundraising-photo pixel-box">
-          <img src="images/bakesale1.jpeg" alt="Bake sale fundraising event">
-        </div>
-      </div>
-      <p class="fundraising-caption">
-        Our bake sale fundraiser — Rosie, Calvin, Jason (left to right) — raised over $600 for our Summer Pilot program!
-      </p>
-    </div>
-  </section>
- 
-  <hr class="divider-dashed">
- 
-  <!-- CONNECT / SOCIAL -->
-  <section class="section-connect" id="connect">
-    <div class="connect-text">
-    <div class="section-title">STAY CONNECTED</div>
-    <p class="section-sub">Join our communities for updates, announcements, and more.</p>
-    </div>
-    <div class="social-grid">
-      <a href="https://discord.gg/Qs9te3c6eh" target="_blank" class="social-card discord">
-        <div class="social-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-        </div>
-        <div>
-          <div class="social-name">Discord</div>
-          <div class="social-sub">Join our server</div>
-        </div>
-      </a>
-      <a href="https://www.instagram.com/englishliteracyprojectofficial/" target="_blank" class="social-card instagram">
-        <div class="social-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-        </div>
-        <div>
-          <div class="social-name">Instagram</div>
-          <div class="social-sub">@englishliteracyprojectofficial</div>
-        </div>
-      </a>
-      <a href="mailto:englishliteracyprojectofficial@gmail.com" class="social-card email">
-        <div class="social-icon">📧</div>
-        <div>
-          <div class="social-name">Email</div>
-          <div class="social-sub">englishliteracyprojectofficial@gmail.com</div>
-        </div>
-      </a>
-    </div>
-  </section>
- 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="hero-stars"></div>
-    <div class="cta-content">
-      <img src="images/elplogo.png" alt="ELP">
-      <div>
-        <div class="section-title">READY TO GET INVOLVED?</div>
-        <p class="section-sub">Whether you want to volunteer as a tutor, refer a student, or simply learn more — we'd love to hear from you.</p>
-        <a href="#" class="btn-primary" onclick="showPage('contact')">▶ CONTACT US</a>
-      </div>
-    </div>
-  </section>
- 
-</div><!-- end home -->
- 
-<!-- ══════════════════════════════════════════ -->
-<!-- TEAM PAGE                                   -->
-<!-- ══════════════════════════════════════════ -->
-<div id="page-ourteam" class="page">
-  <div class="page-hero">
-    <div class="hero-stars"></div>
-    <div class="page-hero-content">
-      <div class="hero-tag">Bios</div>
-      <h1>OUR TEAM</h1>
-      <p>Meet the dedicated leaders behind ELP</p>
-      <p class="org-status">
-        ELP is officially registered with the state of Virginia
-        and advised by adults.
-      </p>
     </div>
   </div>
-  <div class="pixel-strip"></div>
- 
-  <div class="team-body">
-    <div class="team-section-label">▶ PRESIDENTS</div>
-    <div class="team-row">
-      <div class="person">
-        <img class="person-avatar" src="images/rosie.png" alt="Rosie L.">
-        <h3>Rosie L.</h3>
-        <p>President</p>
-      </div>
-      <div class="person">
-        <img class="person-avatar" src="images/jason.png" alt="Jason Y.">
-        <h3>Jason Y.</h3>
-        <p>President</p>
-      </div>
-    </div>
- 
-    <div class="team-section-label">▶ TEAM</div>
-    <div class="team-row grid4">
-      <div class="person"><img class="person-avatar" src="images/abby.png" alt="Abby C."><h3>Abby C.</h3><p>Program Director</p></div>
-      <div class="person"><img class="person-avatar" src="images/caroline.png" alt="Caroline F."><h3>Caroline F.</h3><p>Program Director</p></div>
-      <div class="person"><img class="person-avatar" src="images/oliver.png" alt="Oliver W."><h3>Oliver W.</h3><p>Program Director</p></div>
-      <div class="person"><img class="person-avatar" src="images/ellina.png" alt="Ellina S."><h3>Ellina S.</h3><p>Chinese Program Director</p></div>
-      <div class="person"><img class="person-avatar" src="images/ethan.png" alt="Ethan B."><h3>Ethan B.</h3><p>Secretary</p></div>
-      <div class="person"><img class="person-avatar" src="images/calvin.png" alt="Calvin H."><h3>Calvin H.</h3><p>Treasurer</p></div>
-      <div class="person"><img class="person-avatar" src="images/daisy.png" alt="Daisy L."><h3>Daisy L.</h3><p>Director of Tech</p></div>
-    </div>
-  </div>
-</div>
- 
-<!-- ══════════════════════════════════════════ -->
-<!-- CONTACT PAGE                               -->
-<!-- ══════════════════════════════════════════ -->
-<div id="page-contact" class="page">
-  <div class="page-hero">
-    <div class="hero-stars"></div>
-    <div class="page-hero-content">
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- CONTACT PAGE                               -->
+  <!-- ══════════════════════════════════════════ -->
+  <div id="page-contact" class="page">
+    <div class="page-hero">
+      <div class="hero-stars"></div>
+      <div class="page-hero-content">
         <h1>CONTACT US</h1>
-      <p>Have questions? Want to volunteer or enroll a student? Reach out!</p>
-    </div>
-  </div>
-  <div class="pixel-strip"></div>
- 
-  <div style="padding:1.75rem 2rem; display:flex; justify-content:center;">
-    <a href="https://forms.gle/qE9w2Fsqn5RjhF536" target="_blank" class="signup">SIGN UP TO BECOME A TUTOR!</a>
-  </div>
- 
-  <div class="contact-body">
-    <div class="contact-inner">
-      <div> 
-        <div class="contact-info-item">
-          <div class="contact-icon">💬</div>
-          <div>
-            <div class="contact-label">WeChat</div>
-            <div class="contact-value">Preferred for student communication.</div>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon">📧</div>
-          <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-value">englishliteracyprojectofficial@gmail.com</div>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Discord</div>
-            <div class="contact-value">Join our server for community updates.</div>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Instagram</div>
-            <div class="contact-value">@englishliteracyprojectofficial</div>
-          </div>
-        </div>
- 
-        <div class="student-note">
-          <div class="student-note-title">[ FOR STUDENTS IN CHINA ]</div>
-          <div class="student-note-body">We host sessions on Tencent Meeting and VooV. All tools are free and easy to set up.</div>
-        </div>
-      </div>
- 
-      <div class="contact-form">
-        <h3>SEND US A MESSAGE</h3>
-        <div id="form-content">
-          <div class="form-group">
-            <label for="cf-name">Your name</label>
-            <input type="text" id="cf-name" placeholder="Full name">
-          </div>
-          <div class="form-group">
-            <label for="cf-email">Email address</label>
-            <input type="email" id="cf-email" placeholder="you@example.com">
-          </div>
-          <div class="form-group">
-            <label for="cf-role">I am a...</label>
-            <select id="cf-role">
-              <option value="">Select one</option>
-              <option>Prospective student</option>
-              <option>Parent or guardian</option>
-              <option>Volunteer tutor</option>
-              <option>Partner organization</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="cf-message">Message</label>
-            <textarea id="cf-message" placeholder="Tell us a bit about yourself or your question..."></textarea>
-          </div>
-          <button class="btn-primary btn-full" onclick="submitForm()">▶ SEND MAIL ✈</button>
-        </div>
-        <div class="form-success" id="form-success">
-          <span class="form-success-icon">✈</span>
-          <h4>MESSAGE SENT!</h4>
-          <p>Thanks for reaching out. We'll be in touch soon.</p>
-        </div>
+        <p>Have questions? Want to volunteer or enroll a student? Reach out!</p>
       </div>
     </div>
+    <div class="pixel-strip"></div>
+
+    <div style="padding:1.75rem 2rem; display:flex; justify-content:center;">
+      <a href="https://forms.gle/qE9w2Fsqn5RjhF536" target="_blank" class="signup">SIGN UP TO BECOME A TUTOR!</a>
+    </div>
+
+    <div class="contact-body">
+      <div class="contact-inner">
+        <div>
+          <div class="contact-info-item">
+            <div class="contact-icon">💬</div>
+            <div>
+              <div class="contact-label">WeChat</div>
+              <div class="contact-value">Preferred for student communication.</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">englishliteracyprojectofficial@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path
+                  d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Discord</div>
+              <div class="contact-value">Join our server for community updates.</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Instagram</div>
+              <div class="contact-value">@englishliteracyprojectofficial</div>
+            </div>
+          </div>
+
+          <div class="student-note">
+            <div class="student-note-title">[ FOR STUDENTS IN CHINA ]</div>
+            <div class="student-note-body">We host sessions on Tencent Meeting and VooV. All tools are free and easy to
+              set up.</div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>SEND US A MESSAGE</h3>
+          <div id="form-content">
+            <div class="form-group">
+              <label for="cf-name">Your name</label>
+              <input type="text" id="cf-name" placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email address</label>
+              <input type="email" id="cf-email" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="cf-role">I am a...</label>
+              <select id="cf-role">
+                <option value="">Select one</option>
+                <option>Prospective student</option>
+                <option>Parent or guardian</option>
+                <option>Volunteer tutor</option>
+                <option>Partner organization</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" placeholder="Tell us a bit about yourself or your question..."></textarea>
+            </div>
+            <button class="btn-primary btn-full" onclick="submitForm()">▶ SEND MAIL ✈</button>
+          </div>
+          <div class="form-success" id="form-success">
+            <span class="form-success-icon">✈</span>
+            <h4>MESSAGE SENT!</h4>
+            <p>Thanks for reaching out. We'll be in touch soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
- 
-<footer>
-  <span>© 2025 ENGLISH LITERACY PROJECT</span> &nbsp;·&nbsp; CONNECTING LEARNERS ACROSS THE GLOBE ✈
-</footer>
- 
-<script>
-  // ── PAGE ROUTING ──────────────────────────────
-  function showPage(name) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('page-' + name).classList.add('active');
-    window.scrollTo({ top: 0 });
-    // re-trigger reveal for new page
-    triggerReveal();
-  }
- 
-  // ── FORM ──────────────────────────────────────
-  const FORMSPREE_ACTION = 'https://formspree.io/f/xqpaeeyj';
 
-  function submitForm() {
-    const name    = document.getElementById('cf-name').value.trim();
-    const email   = document.getElementById('cf-email').value.trim();
-    const role    = document.getElementById('cf-role').value.trim();
-    const message = document.getElementById('cf-message').value.trim();
-    if (!name || !email) { alert('Please fill in your name and email.'); return; }
+  <footer>
+    <span>© 2025 ENGLISH LITERACY PROJECT</span> &nbsp;·&nbsp; CONNECTING LEARNERS ACROSS THE GLOBE ✈
+  </footer>
 
-    const payload = { name, email, role, message };
+  <script>
+    // ── PAGE ROUTING ──────────────────────────────
+    function showPage(name) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + name).classList.add('active');
+      window.scrollTo({ top: 0 });
+      // re-trigger reveal for new page
+      triggerReveal();
+    }
 
-    fetch(FORMSPREE_ACTION, {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: JSON.stringify(payload)
-    })
-    .then(response => {
-      if (response.ok) {
-        document.getElementById('form-content').style.display = 'none';
-        document.getElementById('form-success').style.display = 'block';
-      } else {
-        response.json().then(data => {
-          console.error('Formspree error:', data);
-          alert('Sorry, something went wrong sending your message. Please try again or email us directly.');
+    // ── FORM ──────────────────────────────────────
+    const FORMSPREE_ACTION = 'https://formspree.io/f/xqpaeeyj';
+
+    function submitForm() {
+      const name = document.getElementById('cf-name').value.trim();
+      const email = document.getElementById('cf-email').value.trim();
+      const role = document.getElementById('cf-role').value.trim();
+      const message = document.getElementById('cf-message').value.trim();
+      if (!name || !email) { alert('Please fill in your name and email.'); return; }
+
+      const payload = { name, email, role, message };
+
+      fetch(FORMSPREE_ACTION, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(response => {
+          if (response.ok) {
+            document.getElementById('form-content').style.display = 'none';
+            document.getElementById('form-success').style.display = 'block';
+          } else {
+            response.json().then(data => {
+              console.error('Formspree error:', data);
+              alert('Sorry, something went wrong sending your message. Please try again or email us directly.');
+            });
+          }
+        })
+        .catch(err => {
+          console.error('Network error:', err);
+          alert('Sorry, something went wrong sending your message. Please check your connection and try again.');
         });
-      }
-    })
-    .catch(err => {
-      console.error('Network error:', err);
-      alert('Sorry, something went wrong sending your message. Please check your connection and try again.');
-    });
-  }
- 
+    }
 
- 
-  // ── SCROLL REVEAL ─────────────────────────────
-  function triggerReveal() {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
+
+
+    // ── SCROLL REVEAL ─────────────────────────────
+    function triggerReveal() {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+    }
+    triggerReveal();
+
+
+    // ─── LANGUAGE TOGGLE ─────────────────────────
+
+    let currentLanguage = 'en';
+
+    const translations = {
+      // NAVIGATION
+      'Home': '首页',
+      'Programs': '项目介绍',
+      'Connect': '联系我们',
+      'Our Team': '我们的团队',
+      'Contact': '联系方式',
+
+      // HERO
+      'We provide accessible English tutoring for students abroad, offering personalized classes and immersive language exposure at an international scale.':
+        '我们为海外学生提供便捷的英语辅导，通过个性化课程和沉浸式语言学习，帮助学生提升英语能力。',
+
+      'GET INVOLVED': '加入我们',
+      'OUR PROGRAMS': '我们的项目',
+
+      // SIGNUP
+      'SIGN UP TO BECOME A TUTOR!': '报名成为英语导师！',
+
+      // PROGRAMS
+      '// PROGRAMS': '项目介绍',
+      'OUR': '我们的',
+      'PROGRAMS': '项目',
+      'CHINA PROGRAM': '中国项目',
+      'English tutoring for Chinese-speaking students, with lessons built around conversational skills, reading comprehension, and academic English.':
+        '为中文母语学生提供英语辅导，课程涵盖英语口语、阅读理解和学术英语。',
+      'ELEMENTARY ESOL': '小学英语项目',
+      "We're expanding into elementary-school ESOL programs to help younger English learners build language skills and confidence.":
+        '我们正在拓展小学英语项目，帮助年幼的英语学习者培养语言能力和学习自信。',
+
+      // REACH
+      'Our Reach': '我们的覆盖范围',
+      'COUNTRIES WE\'VE': '我们已覆盖的',
+      'REACHED': '国家',
+      "Here's where ELP students and tutors connect from.":
+        '以下是 ELP 学生和导师所在的国家。',
+      'China': '中国',
+      'United States': '美国',
+      'Canada': '加拿大',
+      'Switzerland': '瑞士',
+      'Ireland': '爱尔兰',
+
+      // PLATFORMS
+      'How We Meet': '我们的交流方式',
+      'OUR ': '我们的',
+      'PLATFORMS': '交流平台',
+      'VooV / Tencent Meeting': 'VooV / 腾讯会议',
+      'International video calls': '国际视频会议',
+      'PowerPoint': 'PowerPoint',
+      'Weekly lesson materials': '每周课程资料',
+      'Email & WeChat': '电子邮件和微信',
+      'Communication and coordination': '日常沟通与协调',
+
+      // SUMMER PILOT
+      'Summer Pilot 2026': '2026年暑期试点项目',
+      'SUMMER PILOT PROGRAM': '暑期试点项目',
+      'RECAP': '回顾',
+      'In four weeks, our Summer Pilot helped over 40 students across five countries gain the skills and confidence to speak English with ease.':
+        '在为期四周的暑期试点项目中，我们帮助来自五个国家的40多名学生提升英语能力，并增强了他们使用英语交流的信心。',
+      'Students Taught': '已辅导学生',
+      'Students signed up for homework': '报名作业辅导的学生',
+      'Pilot Countries': '参与国家',
+      'Raised': '筹集资金',
+      'Week 1: Students learning English pronunciation':
+        '第一周：学习英语发音',
+      'Week 2: Introduction to American culture + application outside of textbook':
+        '第二周：了解美国文化，并将英语应用于课本之外的实际场景',
+      'Week 3: Students ranging from 5-50 learned about activities, experiences, and school life':
+        '第三周：5至50岁的学生学习日常活动、生活经历和校园生活相关英语',
+      'Week 4: ELP students finished our pilot program! They gained confidence and practice in using English':
+        '第四周：暑期试点项目圆满结束！学生们在英语交流方面获得了更多练习和信心',
+
+      // FUNDRAISING
+      'FUNDRAISING': '筹款',
+      'HIGHLIGHTS': '活动回顾',
+      'Our bake sale fundraiser — Rosie, Calvin, Jason (left to right) — raised over $600 for our Summer Pilot program!':
+        '我们的烘焙义卖活动（从左至右：Rosie、Calvin、Jason）为暑期试点项目筹集了超过600美元！',
+
+      // SOCIAL
+      'STAY CONNECTED': '保持联系',
+      'Join our communities for updates, announcements, and more.':
+        '欢迎加入我们的社群，获取最新动态、公告和更多信息。',
+      'Discord': 'Discord',
+      'Join our server': '加入我们的服务器',
+      'Instagram': 'Instagram',
+      'Email': '电子邮件',
+
+      // CTA
+      'READY TO GET INVOLVED?': '准备好加入我们了吗？',
+      "Whether you want to volunteer as a tutor, refer a student, or simply learn more — we'd love to hear from you.":
+        '无论您希望成为志愿导师、推荐学生，还是进一步了解我们的项目，我们都期待您的联系。',
+      'CONTACT US': '联系我们',
+
+      // TEAM PAGE
+      'Bios': '团队介绍',
+      'OUR TEAM': '我们的团队',
+      'Meet the dedicated leaders behind ELP':
+        '认识带领 ELP 发展的团队成员',
+      'ELP is officially registered with the state of Virginia and advised by adults.':
+        'ELP 已在弗吉尼亚州正式注册，并由成年顾问提供指导。',
+      'PRESIDENTS': '主席',
+      'TEAM': '团队',
+      'President': '主席',
+      'Program Director': '项目主管',
+      'Chinese Program Director': '中文项目主管',
+      'Secretary': '秘书',
+      'Treasurer': '财务主管',
+      'Director of Tech': '技术主管',
+
+      // CONTACT PAGE
+      'CONTACT US': '联系我们',
+      'Have questions? Want to volunteer or enroll a student? Reach out!':
+        '有任何问题？想成为志愿者或为学生报名？欢迎联系我们！',
+      'Preferred for student communication.': '推荐用于与学生沟通。',
+      'Join our server for community updates.': '加入我们的服务器，获取社群动态。',
+      'SEND US A MESSAGE': '给我们留言',
+      'Your name': '您的姓名',
+      'Full name': '请输入您的姓名',
+      'Email address': '电子邮箱',
+      'I am a...': '我的身份是...',
+      'Select one': '请选择',
+      'Prospective student': '有意报名的学生',
+      'Parent or guardian': '家长或监护人',
+      'Volunteer tutor': '志愿导师',
+      'Partner organization': '合作机构',
+      'Other': '其他',
+      'Message': '留言',
+      'Tell us a bit about yourself or your question...':
+        '请介绍一下自己或告诉我们您的问题...',
+      'SEND MAIL ✈': '发送邮件 ✈',
+      'MESSAGE SENT!': '发送成功！',
+      "Thanks for reaching out. We'll be in touch soon.":
+        '感谢您的联系！我们会尽快回复您。',
+      '[ FOR STUDENTS IN CHINA ]': '[ 中国学生须知 ]',
+      'We host sessions on Tencent Meeting and VooV. All tools are free and easy to set up.':
+        '我们的课程通过腾讯会议和 VooV 进行。所有工具均可免费使用，且设置简单。',
+
+      // FOOTER
+      '© 2025 ENGLISH LITERACY PROJECT':
+        '© 2025 英语素养计划',
+      'CONNECTING LEARNERS ACROSS THE GLOBE ✈':
+        '连接全球英语学习者 ✈',
+
+      // BUTTONS
+      '▶ GET INVOLVED': '▶ 加入我们',
+      '◆ OUR PROGRAMS': '◆ 我们的项目',
+      '▶ CONTACT US': '▶ 联系我们',
+      '▶ SEND MAIL ✈': '▶ 发送邮件 ✈',
+    };
+
+
+    // Translate visible text nodes
+    function translatePage(language) {
+      const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode(node) {
+            if (
+              node.parentElement.closest('script, style') ||
+              !node.nodeValue.trim()
+            ) {
+              return NodeFilter.FILTER_REJECT;
+            }
+
+            return NodeFilter.FILTER_ACCEPT;
+          }
+        }
+      );
+
+      const nodes = [];
+
+      while (walker.nextNode()) {
+        const node = walker.currentNode;
+
+        if (!node._originalText) {
+          node._originalText = node.nodeValue;
+        }
+
+        nodes.push(node);
+      }
+
+      nodes.forEach(node => {
+        const original = node._originalText;
+        const trimmed = original.trim().replace(/\s+/g, ' ');
+        
+        const translated = translations[trimmed];
+
+        if (language === 'zh' && translated) {
+          const leading = original.match(/^\s*/)[0];
+          const trailing = original.match(/\s*$/)[0];
+
+          node.nodeValue = leading + translated + trailing;
+        } else {
+          node.nodeValue = original;
         }
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
-  }
-  triggerReveal();
-</script>
+
+      // Translate placeholders
+      document.querySelectorAll('[placeholder]').forEach(el => {
+        if (!el.dataset.originalPlaceholder) {
+          el.dataset.originalPlaceholder = el.placeholder;
+        }
+
+        el.placeholder = language === 'zh'
+          ? (translations[el.dataset.originalPlaceholder] ||
+            el.dataset.originalPlaceholder)
+          : el.dataset.originalPlaceholder;
+      });
+
+      // Translate the language button
+      document.getElementById('lang-toggle').textContent =
+        language === 'en' ? '中文' : 'EN';
+
+      document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+    }
+
+
+    // Toggle between English and Chinese
+    function toggleLanguage() {
+      currentLanguage = currentLanguage === 'en' ? 'zh' : 'en';
+      translatePage(currentLanguage);
+    }
+
+
+    // Default language: English
+
+  </script>
 
 </body>
+
 </html>
